@@ -1,4 +1,4 @@
-# INSTITUTO TECNOLGICO DE NUEVO LAREDO  
+# INSTITUTO TECNOLÓGICO DE NUEVO LAREDO  
 ## Programación Web  
 ### Ing. Gerardo Pineda Zapata
 **Número de control:** *20100264*  
