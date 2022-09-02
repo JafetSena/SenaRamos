@@ -1,7 +1,8 @@
 # *INSTITUTO TECNOLÓGICO DE NUEVO LAREDO*  
 ## **PROGRAMACIÓN WEB 7 - 8 A.M.**  
 ### **Ing. Gerardo Pineda Zapata**  
-### Modelo de caja
+### Modelo de caja  
+### __*Jafet Anselmo Sena Ramos 5to Semestre ISC*__
 ---
 Todo en CSS tiene una caja alrededor, y comprender estas cajas es clave para poder crear diseños con CSS o para alinear elementos con otros elementos.  
 En CSS, en general, hay dos tipos de cajas: cajas en bloque y cajas en línea. Estas características se refieren al modo como se comporta la caja en términos de flujo de página y en relación con otras cajas de la página:  
