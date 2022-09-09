@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .cajaRelativa {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            border: 5px solid blue;
+            overflow: scroll;
+        }
+        .cajaAbsoluta {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border: 5px solid red;
+            top: 300px;
+            left: 50px;
+        }
+        #caja2 {
+            left: 100px;
+        }
+        #caja3 {
+            top: 250px;
+            right: 25px;
+            width: 25%;
+            height: 100px;
+            overflow: scroll;
+            border: 10px solid orangered;
+        }
+        .cajaFija {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            border: 5px solid purple;
+        }
+        .cajaPegajosa {
+            width: 500px;
+            height: 300px;
+            position: sticky;
+            top: 10px;
+            left: 500px;
+            overflow: scroll;
+            border: 5px solid green
+        }
+    </style>
+</head>
+<body>
+    <div class="cajaRelativa"></div>
+    <div id="caja2" class="cajaRelativa">
+        <div class="cajaAbsoluta">
+
+        </div>
+    </div>
+    <div class="cajaRelativa"></div>
+    <div class="cajaPegajosa">
+        <div class="cajaAbsoluta">
+
+        </div>
+    </div>
+    <div class="cajaRelativa"></div>
+    <div class="cajaFija"></div>
+    <div class="cajaRelativa"></div>
+    <div id="caja3" class="cajaFija">
+        <div class="cajaAbsoluta"></div>
+    </div>
+</body>
+</html>
