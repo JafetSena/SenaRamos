@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    width: 200px;
+    height: 500px;
+}
+
+ul > li > ul {
+    display: none;
+}
+
+ul > li:hover > ul {
+    display: block;
+    height: 100%;
+}
+
+.opcion {
+    background-color: darkred;
+    color: white;
+}
+
+.subOpcion {
+    padding-left: 20px;
+    background-color: gold;
+    color: black;
+}
+
+.subOpcion:active {
+    background-color: darkgoldenrod;
+    color: white;
+}
+
+.ultimaOpcion {
+    background-color: lightgray;
+    color: black;
+}
+
+#op2 {
+    padding-left: 40px;
+}
+
+#op3 {
+    padding-left: 60px;
+}
