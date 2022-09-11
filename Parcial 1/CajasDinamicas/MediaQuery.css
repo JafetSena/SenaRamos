@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor {
+    width: 100%;
+    height: 624px;
+    background-color: purple;
+}
+
+.caja {
+    float: left;
+    border: 7.5px double black;
+/*  width: 100px;   */
+    width: calc((100% / 6) - 4px);  /*Para la funcion Cacl(), se dejan espacios entre los operadores para que funcione*/
+    margin: 2px;
+    height: 100px;
+    text-align: center;
+    color: white;
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+    #caja4 {
+        clear: left;
+    }
+    .caja {
+        width: calc((100% / 3) - 4px);
+        border: 7.5px double green
+    }
+}
+
+@media screen and (max-width: 499px) and (min-width: 300px) {
+    #caja3 {
+        clear: left;
+    }
+    .caja {
+        width: calc((100% / 2) - 4px);
+        border: 7.5px double yellow;
+    }
+}
+@media screen and (max-width: 299px) {
+    .caja {
+        clear: left;
+        width: calc(100% - 4px);
+        border: 7.5px double red;
+    }
+}
