@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro De Eventos</title>
+    <link rel="stylesheet" href="RegistroEventos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div id="caja 1" class="caja">Caja 1 <br>
+            <button id="miBoton1" onclick="alert('Click en Boton 1')">Hola Mundo 1</button>
+        </div>
+        <div id="caja 2" class="caja">Caja 2</div>
+        <div id="caja 3" class="caja">Caja 3 <br>
+            <button id="miBoton2">Hola Mundo 2</button>
+        </div>
+        <div id="caja 4" class="caja">Caja 4</div>
+        <div id="caja 5" class="caja">Caja 5 <br>
+            <button id="miBoton3">Hola Mundo 3</button>
+        </div>
+        <div id="caja 6" class="caja">Caja 6</div>
+    </div>
+    
+    
+    
+    <script>
+        document.getElementById("miBoton2").onclick = function() {
+            alert("Click en Boton 2")
+        }
+
+        document.querySelector("#miBoton3").addEventListener("click", miFuncion1);
+
+        function miFuncion1() {
+            alert("Click en boton 3 / Funcion 1");
+        }
+    </script>
+</body>
+</html>
