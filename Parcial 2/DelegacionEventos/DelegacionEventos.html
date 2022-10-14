@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="DelegacionEventos.css">
+    <title>Delegacion de Eventos</title>
+</head>
+<body>
+    <div class="contenedor" id="cont">
+        <div class="caja" id="caja1">Caja 1</div>
+        <div class="caja" id="caja2">Caja 2</div>
+        <div class="caja" id="caja3">Caja 3</div>
+        <div class="caja" id="caja4">Caja 4</div>
+        <div class="caja" id="caja5">Caja 5</div>
+        <div class="caja" id="caja6">Caja 6</div>
+        <div class="caja" id="caja7">Caja 7</div>
+        <div class="caja" id="caja8">Caja 8</div>
+        <div class="caja" id="caja9">Caja 9</div> 
+    </div>
+    <script>
+        var elem = document.getElementById("cont");
+        elem.addEventListener("click", cambiarCaja);
+        function cambiarCaja(elem) {
+            console.log(elem);
+            if (document.getElementById(elem.target.id).classList.contains("caja")) {
+                document.getElementById(elem.target.id).classList.toggle("cajaAmarilla");
+            }
+            if (elem.target.id=="caja9") {
+                elem.removeEventListener("click", cambiarCaja);
+            }
+        }
+    </script>
+</body>
+</html>
