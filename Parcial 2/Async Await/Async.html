@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="Async.css">
+</head>
+<body>
+    <button id="btnPeticionFetch">Peticion Fetch</button>
+    <button id="btnPeticionFetchAsyncAwait">Peticion Async Await</button>
+    <button id="btnPeticionJQuery">Peticion JQuery</button>
+    <div class="contenedor">
+        <div id="cajaFetch">
+        </div>
+        <div id="cajaFetchAsyncAwait">
+        </div>
+        <div id="cajaJQuery">
+        </div>
+    </div>
+    <script>
+        document.getElementById("btnPeticionFetch").addEventListener("click", function(){
+            fetch("https://api.chucknorris.io/jokes/random")
+            .then(respuesta => respuesta.json() )
+            .then(datoJson => document.getElementById("cajaFetch").innerText = "Fetch: " + datoJson.value);
+        })
+
+        document.getElementById("btnPeticionFetchAsyncAwait").addEventListener("click", async function(){
+            let respuesta = await fetch("https://api.chucknorris.io/jokes/random")
+            let datoJson = await respuesta.json();
+            console.log(datoJson.value);
+            document.getElementById("cajaFetchAsyncAwait").innerText = "Async Await: " + datoJson.value;
+        })
+
+        document.getElementById("btnPeticionJQuery").addEventListener("click", function() {
+            $.getJSON("https://api.chucknorris.io/jokes/random", function(datoJson){
+            document.getElementById("cajaJQuery").innerText = "JQuery: " + datoJson.value;
+        })
+        })
+    </script>
+</body>
+</html>
