@@ -20,7 +20,7 @@ $registros = mysqli_query($con,$consulta) or die("problemas con el select");
 // }
 
 //Resultado de la consulta como una matriz
-$result = mysqli_fetch_all($registros.MYSQLI_ASSOC);
+$result = mysqli_fetch_all($registros,MYSQLI_ASSOC);
 
 mysqli_close($con);
 echo json_encode($result);

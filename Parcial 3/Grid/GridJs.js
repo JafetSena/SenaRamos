@@ -24,7 +24,8 @@ $(document).ready(function(){
         }
     }
     $.ajax(settings).done(function(response){
-        let tabla = JSON.parse(response);
+        console.log(response);
+        var tabla = JSON.parse(response);
     });
     $("#jsGrid").jsGrid({
         width: "100%",
@@ -35,7 +36,7 @@ $(document).ready(function(){
         sorting: true,
         paging: true,
      
-        data: clients,
+        data: tabla,
      
         fields: [
             { name: "IdEmpleado", type: "text", width: 150, validate: "required" },
