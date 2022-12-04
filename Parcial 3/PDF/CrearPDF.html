@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF</title>
+</head>
+<body>
+    <form id="formula">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre">
+        <input type="button" value="Crear PDF" id="btn">
+    </form>
+    <br>
+    Version 1.7
+    <script>
+        document.getElementById("btn").addEventListener("click",async function(){
+            
+            // let headersList = { "Accept": "*/*", }
+            // let formNombre = document.getElementById('formula');
+            // let cuerpo = new FormData(formNombre);
+
+            // let response = await fetch("./crearPDF.php", { 
+            //     method: /*"GET",*/ "POST", 
+            //     body: cuerpo,
+            //     headers: headersList
+            // });
+
+            // let data = await response.blob();
+            let headersList = {
+            "Accept": "*/*"
+            }
+            let formNombre = document.getElementById('formula');
+            let cuerpo = new FormData(formNombre);
+
+            let response = await fetch("http://localhost/SenaRamos/Parcial%203/PDF/crearPDF.php?nombre=Jafet", { 
+            method: "POST",
+            body: cuerpo,
+            headers: headersList
+            });
+
+            let data = await response.blob();
+            let archivoURL = URL.createObjectURL(data);
+            window.open(archivoURL);
+
+        });
+    </script>
+</body>
+</html>
